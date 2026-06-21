@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "How do I get a custom quote?",
-    a: "Use the contact form below or WhatsApp us directly at +27 70 757 9866. Tell us what you need, your timeline, and your budget, and we'll come back with a detailed proposal within 24 hours.",
+    a: "Use the contact form below or WhatsApp us directly at +27 70 658 4825. Tell us what you need, your timeline, and your budget, and we'll come back with a detailed proposal within 24 hours.",
   },
 ];
 
@@ -183,7 +183,7 @@ export default function FAQ() {
             Still have questions?
           </p>
           <a
-            href="https://wa.me/27707579866?text=Hi%20OMEGAELZ%2C%20I%20have%20a%20question%20about%20your%20services."
+            href="https://wa.me/27706584825?text=Hi%20OMEGAELZ%2C%20I%20have%20a%20question%20about%20your%20services."
             target="_blank" rel="noopener noreferrer"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '10px',
