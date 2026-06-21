@@ -1,0 +1,301 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --midnight: #011627;
+    --abyss: #02111e;
+    --teal: #073545;
+    --mint: #D8E2DC;
+    --cyan: #9CF6F6;
+    --magenta: #F865B3;
+    --glow: #C9FBF8;
+    --text-primary: #D8E2DC;
+    --text-secondary: rgba(216, 226, 220, 0.5);
+    --text-inverse: #011627;
+    --background: 210 96% 5%;
+    --foreground: 140 12% 87%;
+    --card: 207 87% 12%;
+    --card-foreground: 140 12% 87%;
+    --popover: 207 87% 12%;
+    --popover-foreground: 140 12% 87%;
+    --primary: 330 92% 68%;
+    --primary-foreground: 210 96% 5%;
+    --secondary: 207 87% 12%;
+    --secondary-foreground: 140 12% 87%;
+    --muted: 207 87% 12%;
+    --muted-foreground: 140 12% 50%;
+    --accent: 180 85% 76%;
+    --accent-foreground: 210 96% 5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 330 92% 68% / 0.15;
+    --input: 140 12% 87% / 0.1;
+    --ring: 330 92% 68%;
+    --radius: 0.125rem;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#011627] text-[#D8E2DC];
+    font-family: 'Space Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-wrap: break-word;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Sans', sans-serif;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  p {
+    text-wrap: pretty;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  ::selection {
+    background: rgba(248, 101, 179, 0.25);
+    color: #D8E2DC;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #011627;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(248, 101, 179, 0.3);
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(248, 101, 179, 0.6);
+  }
+}
+
+@layer components {
+  .omega-glass {
+    background: rgba(1, 22, 39, 0.5);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(248, 101, 179, 0.12);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .omega-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(248, 101, 179, 0.4), transparent);
+    pointer-events: none;
+  }
+
+  .omega-glow-magenta {
+    box-shadow: 0 0 40px rgba(248, 101, 179, 0.25);
+  }
+
+  .omega-glow-cyan {
+    box-shadow: 0 0 40px rgba(156, 246, 246, 0.25);
+  }
+
+  .omega-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    font-family: '"Space Mono", monospace';
+    font-size: 12px;
+    color: #011627;
+    background-color: #F865B3;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 40px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .omega-btn-primary:hover {
+    background-color: #9CF6F6;
+    box-shadow: 0 0 32px rgba(156, 246, 246, 0.35);
+  }
+
+  .omega-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    font-family: '"Space Mono", monospace';
+    font-size: 12px;
+    color: rgba(216, 226, 220, 0.75);
+    background-color: transparent;
+    border: 1px solid rgba(216, 226, 220, 0.2);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .omega-btn-secondary:hover {
+    border-color: rgba(216, 226, 220, 0.5);
+    color: #D8E2DC;
+  }
+
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .contact-layout {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .omega-glass {
+      padding: 28px !important;
+    }
+  }
+}
+
+/* ─── Global Mobile Fixes ─────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Portfolio: single column on mobile */
+  #portfolio [style*="minmax(340px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Anatomy: full width, reduced padding on mobile */
+  #anatomy .w-full {
+    padding: 0 20px !important;
+  }
+
+  /* Tiers: stack rows, reduce gap */
+  #tiers [style*="display: flex"][style*="alignItems: center"] {
+    flex-direction: column !important;
+    gap: 32px !important;
+  }
+  #tiers [style*="maxWidth: '460px'"] {
+    max-width: 100% !important;
+  }
+
+  /* BookConsultation: stack the two-panel layout */
+  .book-consultation-layout {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  /* AIPackages: 1 column on small screens */
+  #ai-packages [style*="repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* IndividualServices: make tabs scrollable */
+  #individual-services [style*="display: flex"][style*="overflow"] {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Reduce heavy section padding */
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Marquee: keep it readable */
+  .marquee-item { padding: 0 20px !important; }
+}
+
+@media (max-width: 480px) {
+  /* Stats: 2 columns instead of 4 */
+  #stats [style*="repeat(auto"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Hero CTAs: stack vertically */
+  #hero [style*="display: flex"][style*="gap: '16px'"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* Testimonials: always 1 column on phones */
+  #testimonials [style*="repeat(3"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer: single column */
+  #footer [style*="repeat(auto"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@layer utilities {
+  .text-gradient-magenta {
+    background: linear-gradient(135deg, #F865B3, #9CF6F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-glow-magenta {
+    border-color: rgba(248, 101, 179, 0.4);
+    box-shadow: 0 0 20px rgba(248, 101, 179, 0.1);
+  }
+
+  .border-glow-cyan {
+    border-color: rgba(156, 246, 246, 0.4);
+    box-shadow: 0 0 20px rgba(156, 246, 246, 0.1);
+  }
+}

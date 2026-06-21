@@ -1,0 +1,12 @@
+node_modules
+dist
+.cache
+package-lock.json
+.replit
+replit.nix
+info.md
+attached_assets
+omegaelz-site.zip
+omegaelz-site.tar.gz
+zipFile.zip
+*.tar.gz
