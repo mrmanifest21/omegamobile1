@@ -128,7 +128,7 @@ export default function AIPackages() {
               </ul>
 
               <a
-                href={`https://wa.me/27706584825?text=${encodeURIComponent(`Hi OMEGAELZ! I'm interested in the ${pkg.name} AI package.`)}`}
+                href={`https://wa.me/27635590106?text=${encodeURIComponent(`Hi OMEGAELZ! I'm interested in the ${pkg.name} AI package.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

@@ -45,7 +45,7 @@ export default function Footer() {
                 Start a Project
               </a>
               <a
-                href="https://wa.me/27706584825"
+                href="https://wa.me/27635590106"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -63,7 +63,7 @@ export default function Footer() {
 
             <div style={{ display: 'flex', gap: '48px', justifyContent: 'center', flexWrap: 'wrap' }}>
               {[
-                { label: '+27 70 658 4825', href: 'tel:+27706584825' },
+                { label: '+27 63 559 0106', href: 'tel:+27635590106' },
                 { label: 'omegaelz@outlook.com', href: 'mailto:omegaelz@outlook.com' },
                 { label: 'omegaelz.com', href: 'https://omegaelz.com' },
               ].map((link) => (

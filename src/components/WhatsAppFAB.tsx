@@ -53,7 +53,7 @@ export default function WhatsAppFAB() {
         </span>
       )}
       <a
-        href="https://wa.me/27706584825?text=Hi%20OMEGAELZ%20Group!%20I%27d%20like%20to%20discuss%20a%20project."
+        href="https://wa.me/27635590106?text=Hi%20OMEGAELZ%20Group!%20I%27d%20like%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
         title="Chat with us on WhatsApp"

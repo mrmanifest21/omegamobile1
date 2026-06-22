@@ -69,7 +69,11 @@ export default function Hero() {
     >
       {/* Video Background */}
       {heroConfig.videoPath && (
-        <video autoPlay muted loop playsInline
+        <video
+          autoPlay muted loop playsInline
+          webkit-playsinline="true"
+          preload="auto"
+          poster="/og-image.jpg"
           style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
         >
           <source src={heroConfig.videoPath} type="video/mp4" />
@@ -88,8 +92,8 @@ export default function Hero() {
         ref={cardRef}
         className="omega-glass"
         style={{
-          position: 'relative', zIndex: 10, maxWidth: '720px', width: '90%',
-          padding: 'clamp(36px, 5vw, 60px)', textAlign: 'center', opacity: 0,
+          position: 'relative', zIndex: 10, maxWidth: '720px', width: '92%',
+          padding: 'clamp(28px, 5vw, 60px)', textAlign: 'center', opacity: 0,
         }}
       >
         {heroConfig.eyebrow && (
@@ -104,12 +108,13 @@ export default function Hero() {
 
         {(heroConfig.titleLine || heroConfig.titleEmphasis) && (
           <h1 ref={titleRef} style={{
-            fontFamily: '"DM Sans", sans-serif', fontSize: 'clamp(36px, 7vw, 96px)',
-            fontWeight: 400, color: '#D8E2DC', letterSpacing: '-0.02em', lineHeight: 0.9, opacity: 0,
+            fontFamily: '"DM Sans", sans-serif', fontSize: 'clamp(32px, 8vw, 96px)',
+            fontWeight: 400, color: '#D8E2DC', letterSpacing: '-0.02em', lineHeight: 0.95, opacity: 0,
+            wordBreak: 'break-word', overflowWrap: 'break-word',
           }}>
-            <span style={{ display: 'block', whiteSpace: 'nowrap' }}>{heroConfig.titleLine}</span>
+            <span style={{ display: 'block' }}>{heroConfig.titleLine}</span>
             {heroConfig.titleEmphasis && (
-              <span style={{ display: 'block', whiteSpace: 'nowrap', color: '#F865B3' }}>
+              <span style={{ display: 'block', color: '#F865B3' }}>
                 {heroConfig.titleEmphasis}
               </span>
             )}
@@ -128,7 +133,7 @@ export default function Hero() {
         )}
 
         {/* CTAs */}
-        <div ref={ctaRef} style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '36px', opacity: 0 }}>
+        <div ref={ctaRef} className="hero-cta-row" style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '36px', opacity: 0 }}>
           {heroConfig.ctaText && (
             <a
               href={heroConfig.ctaTargetId || '#'}
@@ -173,7 +178,7 @@ export default function Hero() {
         </div>
 
         {/* Trust badges */}
-        <div style={{ display: 'flex', gap: '28px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '32px' }}>
+        <div className="hero-badges" style={{ display: 'flex', gap: '28px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '32px' }}>
           {['Web Development', 'AI Automation', 'CRM Systems', 'Data Analytics'].map((badge) => (
             <span key={badge} style={{
               fontFamily: '"Space Mono", monospace', fontSize: '10px',

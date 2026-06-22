@@ -34,7 +34,7 @@ const CONTENT: Record<LegalDoc, { title: string; sections: { heading: string; bo
       },
       {
         heading: '6. Contact',
-        body: 'For any privacy-related queries, contact our data officer at omegaelz@outlook.com or call +27 70 658 4825.',
+        body: 'For any privacy-related queries, contact our data officer at omegaelz@outlook.com or call +27 63 559 0106.',
       },
     ],
   },
@@ -96,7 +96,7 @@ const CONTENT: Record<LegalDoc, { title: string; sections: { heading: string; bo
       },
       {
         heading: 'Requesting a Signed NDA',
-        body: 'We are happy to sign an NDA before any detailed project discussion. Contact us via email at omegaelz@outlook.com or WhatsApp at +27 70 658 4825 and we will have a document ready within 24 hours.',
+        body: 'We are happy to sign an NDA before any detailed project discussion. Contact us via email at omegaelz@outlook.com or WhatsApp at +27 63 559 0106 and we will have a document ready within 24 hours.',
       },
       {
         heading: 'Mutual Agreement',

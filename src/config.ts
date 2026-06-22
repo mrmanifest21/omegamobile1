@@ -555,7 +555,7 @@ export const footerConfig: FooterConfig = {
     "GROUP",
     "Next-generation digital solutions.",
     "Based in South Africa. Serving globally.",
-    "+27 70 658 4825",
+    "+27 63 559 0106",
   ],
   columns: [
     {
@@ -597,7 +597,7 @@ export const footerConfig: FooterConfig = {
         { label: "LinkedIn", href: "https://www.linkedin.com/in/omegaelz-group-21b18a323/" },
         { label: "Twitter / X", href: "https://x.com/omegaelz" },
         { label: "Instagram", href: "https://www.instagram.com/omegaelz/" },
-        { label: "WhatsApp", href: "https://wa.me/27706584825" },
+        { label: "WhatsApp", href: "https://wa.me/27635590106" },
       ],
     },
   ],

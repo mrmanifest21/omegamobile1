@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { individualServicesConfig } from '../config';
 
-const WHATSAPP = '27706584825';
+const WHATSAPP = '27635590106';
 
 const inputBase: React.CSSProperties = {
   width: '100%',
@@ -92,7 +92,7 @@ export default function Contact() {
   };
 
   const contactDetails = [
-    { label: 'WhatsApp', value: '+27 70 658 4825', href: `https://wa.me/${WHATSAPP}` },
+    { label: 'WhatsApp', value: '+27 63 559 0106', href: `https://wa.me/${WHATSAPP}` },
     { label: 'Email', value: 'omegaelz@outlook.com', href: 'mailto:omegaelz@outlook.com' },
     { label: 'Based', value: 'South Africa — Global', href: undefined },
   ];
