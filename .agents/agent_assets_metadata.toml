@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "yiHfYu3jRwAjiSdLdUE1m"
+uri = "file://omegaelz-site.zip"
+type = "unspecified"
+title = "OMEGAELZ Group — Full Source Code"

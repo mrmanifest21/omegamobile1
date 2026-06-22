@@ -13,28 +13,56 @@ const CONTENT: Record<LegalDoc, { title: string; sections: { heading: string; bo
     title: 'Privacy Policy',
     sections: [
       {
-        heading: '1. Information We Collect',
-        body: 'We collect information you voluntarily provide when contacting us, submitting a project inquiry, or booking a consultation — including your name, email address, phone number, and business details. We do not collect data through cookies beyond standard analytics.',
+        heading: 'POPIA Compliance Statement',
+        body: 'OMEGAELZ Group is committed to protecting your personal information in accordance with the Protection of Personal Information Act 4 of 2013 (POPIA). This policy explains how we collect, use, store, and protect your personal information, and outlines your rights as a data subject under South African law.',
       },
       {
-        heading: '2. How We Use Your Information',
-        body: 'Your information is used solely to respond to your inquiry, provide requested services, and send relevant communications about your project. We do not sell, rent, or trade your personal information to third parties.',
+        heading: '1. Responsible Party & Information Officer',
+        body: 'The responsible party for your personal information is OMEGAELZ Group, based in South Africa. Our designated Information Officer is contactable at omegaelz@outlook.com or +27 63 559 0106. You may direct all privacy-related requests, complaints, or queries to this contact.',
       },
       {
-        heading: '3. Data Storage & Security',
-        body: 'All data is stored securely on South African and international servers with industry-standard encryption. We retain client data for the duration of the engagement and up to 36 months thereafter, unless requested for deletion.',
+        heading: '2. Personal Information We Collect',
+        body: 'We collect personal information that you voluntarily provide, including: full name, email address, phone number, business name and industry, project details and requirements, and any other information submitted via inquiry forms, email, or WhatsApp. We do not collect sensitive personal information (as defined in POPIA) unless explicitly required and consented to for a specific service.',
       },
       {
-        heading: '4. Third-Party Services',
-        body: 'We may use trusted third-party tools (e.g. WhatsApp Business, Google Analytics, email platforms) to communicate and deliver services. These tools have their own privacy policies and we require them to handle data responsibly.',
+        heading: '3. Purpose of Processing',
+        body: 'Your personal information is processed for the following lawful purposes only: (a) to respond to your inquiry or consultation request; (b) to prepare and deliver project proposals; (c) to provide contracted services; (d) to send project-related communications and updates; (e) to comply with legal obligations. We will not process your information for any purpose incompatible with the above without your prior consent.',
       },
       {
-        heading: '5. Your Rights',
-        body: 'You have the right to access, update, or request deletion of your personal information at any time. Contact us at omegaelz@outlook.com to exercise these rights. We comply with South Africa\'s Protection of Personal Information Act (POPIA).',
+        heading: '4. Lawful Basis for Processing',
+        body: 'We process your personal information on the following grounds under POPIA: (a) Consent — where you have provided explicit consent; (b) Contractual necessity — where processing is required to fulfil a service agreement; (c) Legitimate interest — where processing is reasonably necessary for our business operations and does not override your rights; (d) Legal obligation — where we are required by law to process the information.',
       },
       {
-        heading: '6. Contact',
-        body: 'For any privacy-related queries, contact our data officer at omegaelz@outlook.com or call +27 63 559 0106.',
+        heading: '5. Data Retention',
+        body: 'We retain your personal information for the duration of our engagement and for a maximum of 36 months thereafter, unless a longer retention period is required by law or you request earlier deletion. Client project files are retained for 5 years to comply with applicable commercial and tax obligations. Once the retention period expires, data is securely deleted or anonymised.',
+      },
+      {
+        heading: '6. Data Storage & Security',
+        body: 'Your information is stored on secured servers using industry-standard encryption (TLS/SSL). Access is restricted to authorised OMEGAELZ personnel directly involved in your project. We implement reasonable technical and organisational measures to prevent unauthorised access, loss, or disclosure of your data. In the event of a data breach that poses a risk to your rights, we will notify you and the Information Regulator as required by POPIA.',
+      },
+      {
+        heading: '7. Third-Party Operators',
+        body: 'We may share your personal information with trusted third-party operators only to the extent necessary to deliver our services. These include: email and communication platforms (e.g. Microsoft Outlook), WhatsApp Business (Meta), Google Analytics (anonymised usage data), and cloud hosting providers. All operators are contractually required to process your data only on our instructions and in accordance with POPIA. We do not sell, rent, or trade your personal information.',
+      },
+      {
+        heading: '8. Trans-Border Transfers',
+        body: 'Some of our third-party tools (e.g. Google, Meta/WhatsApp) may process data outside South Africa. Where this occurs, we ensure that the recipient country or organisation offers an adequate level of data protection comparable to POPIA, or that appropriate contractual safeguards are in place.',
+      },
+      {
+        heading: '9. Your Rights as a Data Subject',
+        body: 'Under POPIA, you have the following rights: (a) Right to access — request a copy of the personal information we hold about you; (b) Right to correction — request correction of inaccurate or outdated information; (c) Right to deletion — request erasure of your personal information, subject to legal retention requirements; (d) Right to object — object to processing based on legitimate interest; (e) Right to withdraw consent — withdraw consent at any time without affecting prior lawful processing; (f) Right to complain — lodge a complaint with the Information Regulator of South Africa. To exercise any of these rights, contact us at omegaelz@outlook.com.',
+      },
+      {
+        heading: '10. Cookies & Website Analytics',
+        body: 'Our website uses Google Analytics to collect anonymised, aggregated data about how visitors use our site (e.g. pages visited, session duration). No personally identifiable information is collected through analytics. You may disable cookies through your browser settings at any time without affecting your ability to use our site.',
+      },
+      {
+        heading: '11. Contact the Information Regulator',
+        body: 'If you believe we have handled your personal information unlawfully or your complaint has not been resolved satisfactorily, you have the right to lodge a complaint with the Information Regulator of South Africa: Website: inforegulator.org.za | Email: inforeg@justice.gov.za | Tel: 010 023 5207.',
+      },
+      {
+        heading: '12. Policy Updates',
+        body: 'This Privacy Policy may be updated periodically to reflect changes in our practices or applicable law. The current version will always be available on our website. Material changes will be communicated directly to active clients. Your continued use of our services after any update constitutes acceptance of the revised policy.',
       },
     ],
   },
@@ -219,7 +247,7 @@ export default function LegalModal({ doc, onClose }: Props) {
             color: 'rgba(216,226,220,0.2)', letterSpacing: '0.04em',
             borderTop: '1px solid rgba(216,226,220,0.06)', paddingTop: '24px',
           }}>
-            Last updated: January 2025 — omegaelz@outlook.com
+            Last updated: June 2026 — omegaelz@outlook.com
           </p>
         </div>
       </div>

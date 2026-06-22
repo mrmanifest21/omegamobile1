@@ -190,6 +190,26 @@ export default function Footer() {
         ))}
       </div>
 
+      {/* POPIA Compliance Badge */}
+      <div style={{ borderTop: '1px solid rgba(1,22,39,0.08)', padding: '20px 24px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '10px',
+            border: '1px solid rgba(1,22,39,0.12)', padding: '8px 16px',
+          }}>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1L9 5H13L10 8L11 12L7 10L3 12L4 8L1 5H5L7 1Z" stroke="#011627" strokeOpacity="0.4" strokeWidth="1" strokeLinejoin="round" />
+            </svg>
+            <span style={{ fontFamily: '"Space Mono", monospace', fontSize: '10px', color: 'rgba(1,22,39,0.45)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+              POPIA Compliant
+            </span>
+          </div>
+          <span style={{ fontFamily: '"Space Mono", monospace', fontSize: '10px', color: 'rgba(1,22,39,0.3)', letterSpacing: '0.03em' }}>
+            Your personal information is protected under the Protection of Personal Information Act 4 of 2013 (South Africa).
+          </span>
+        </div>
+      </div>
+
       {/* Bottom Bar */}
       <div style={{ borderTop: '1px solid rgba(1,22,39,0.1)', padding: '20px 24px', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
         {footerConfig.copyright && (

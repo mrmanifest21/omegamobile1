@@ -73,7 +73,6 @@ export default function Hero() {
           autoPlay muted loop playsInline
           webkit-playsinline="true"
           preload="auto"
-          poster="/og-image.jpg"
           style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
         >
           <source src={heroConfig.videoPath} type="video/mp4" />

@@ -62,14 +62,8 @@ export default function Tiers() {
           <div
             key={tier.name}
             ref={(el) => { tierRefs.current[i] = el; }}
-            style={{
-              display: 'flex',
-              flexDirection: i % 2 === 0 ? 'row' : 'row-reverse',
-              gap: '60px',
-              marginBottom: i < tiers.length - 1 ? '120px' : '0',
-              alignItems: 'center',
-              flexWrap: 'wrap',
-            }}
+            className={i % 2 === 0 ? 'tier-row' : 'tier-row tier-row-reverse'}
+            style={{ marginBottom: i < tiers.length - 1 ? '120px' : '0' }}
           >
             {/* Image */}
             <div

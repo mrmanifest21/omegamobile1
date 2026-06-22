@@ -89,15 +89,7 @@ export default function IndividualServices() {
         </div>
 
         {/* Tab Navigation */}
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '0',
-            marginBottom: '0',
-            borderBottom: '1px solid rgba(1, 22, 39, 0.12)',
-          }}
-        >
+        <div className="services-tab-bar">
           {categories.map((cat, i) => (
             <button
               key={cat.title}
@@ -132,23 +124,10 @@ export default function IndividualServices() {
         {/* Table */}
         <div
           ref={tableRef}
-          style={{
-            backgroundColor: '#011627',
-            marginTop: '0',
-            overflow: 'hidden',
-          }}
+          style={{ backgroundColor: '#011627', marginTop: '0', overflow: 'hidden' }}
         >
           {/* Table Header */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr auto auto',
-              gap: '0',
-              padding: '16px 32px',
-              backgroundColor: 'rgba(248, 101, 179, 0.06)',
-              borderBottom: '1px solid rgba(216, 226, 220, 0.06)',
-            }}
-          >
+          <div className="services-table-header">
             <span style={{ fontFamily: '"Space Mono", monospace', fontSize: '10px', color: 'rgba(216,226,220,0.35)', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
               Service — {active.title}
             </span>
@@ -164,55 +143,18 @@ export default function IndividualServices() {
           {active.items.map((item, i) => (
             <div
               key={item.service}
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr auto auto',
-                gap: '0',
-                padding: '18px 32px',
-                borderBottom: i < active.items.length - 1 ? '1px solid rgba(216, 226, 220, 0.05)' : 'none',
-                transition: 'background-color 0.2s ease',
-                cursor: 'default',
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.backgroundColor = 'rgba(248, 101, 179, 0.03)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.backgroundColor = 'transparent';
-              }}
+              className="services-table-row"
+              style={{ borderBottom: i < active.items.length - 1 ? '1px solid rgba(216, 226, 220, 0.05)' : 'none' }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = 'rgba(248, 101, 179, 0.03)'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.backgroundColor = 'transparent'; }}
             >
-              <span
-                style={{
-                  fontFamily: '"DM Sans", sans-serif',
-                  fontSize: '15px',
-                  color: '#D8E2DC',
-                  fontWeight: 400,
-                }}
-              >
+              <span className="service-name" style={{ fontFamily: '"DM Sans", sans-serif', fontSize: '15px', color: '#D8E2DC', fontWeight: 400 }}>
                 {item.service}
               </span>
-              <span
-                style={{
-                  fontFamily: '"Space Mono", monospace',
-                  fontSize: '13px',
-                  color: '#F865B3',
-                  textAlign: 'right',
-                  minWidth: '180px',
-                  letterSpacing: '0.02em',
-                }}
-              >
+              <span className="service-price" style={{ fontFamily: '"Space Mono", monospace', fontSize: '13px', color: '#F865B3', textAlign: 'right', minWidth: '180px', letterSpacing: '0.02em' }}>
                 {item.price}
               </span>
-              <span
-                style={{
-                  fontFamily: '"Space Mono", monospace',
-                  fontSize: '11px',
-                  color: 'rgba(216, 226, 220, 0.35)',
-                  textAlign: 'right',
-                  minWidth: '200px',
-                  paddingLeft: '24px',
-                  letterSpacing: '0.02em',
-                }}
-              >
+              <span className="service-notes" style={{ fontFamily: '"Space Mono", monospace', fontSize: '11px', color: 'rgba(216, 226, 220, 0.35)', textAlign: 'right', minWidth: '200px', paddingLeft: '24px', letterSpacing: '0.02em' }}>
                 {item.notes}
               </span>
             </div>

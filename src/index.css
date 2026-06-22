@@ -188,11 +188,79 @@
     text-transform: uppercase;
   }
 
+  /* ─── Contact Layout ─────────────────────────── */
   .contact-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: start;
+  }
+
+  /* Contact form inner grids */
+  .contact-form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .contact-send-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  /* ─── Services Tab Bar ───────────────────────── */
+  .services-tab-bar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(1, 22, 39, 0.12);
+    position: relative;
+  }
+  .services-tab-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ─── Services Table ─────────────────────────── */
+  .services-table-header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0;
+    padding: 16px 32px;
+    background-color: rgba(248, 101, 179, 0.06);
+    border-bottom: 1px solid rgba(216, 226, 220, 0.06);
+  }
+
+  .services-table-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0;
+    padding: 18px 32px;
+    border-bottom: 1px solid rgba(216, 226, 220, 0.05);
+    transition: background-color 0.2s ease;
+    cursor: default;
+  }
+
+  .services-table-row:last-child {
+    border-bottom: none;
+  }
+
+  /* ─── Tier Rows ──────────────────────────────── */
+  .tier-row {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Alternating direction on desktop */
+  .tier-row-reverse {
+    flex-direction: row-reverse;
   }
 
   @media (max-width: 768px) {
@@ -204,66 +272,102 @@
 
   @media (max-width: 640px) {
     .omega-glass {
-      padding: 28px !important;
+      padding: 24px !important;
     }
   }
 }
 
-/* ─── Global Mobile Fixes ─────────────────────────────── */
+/* ─────────────────────────────────────────────────────── */
+/* MOBILE — 768px and below                                */
+/* ─────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
 
-  /* Prevent horizontal scroll on the whole page */
+  /* Prevent horizontal scroll */
   html, body {
     overflow-x: hidden !important;
     max-width: 100vw !important;
   }
 
-  /* Portfolio: single column on mobile */
+  /* ── Contact form grids stack ── */
+  .contact-form-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+  .contact-send-btns {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Tier rows always stack image-on-top ── */
+  .tier-row,
+  .tier-row-reverse {
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+  .tier-image-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  /* ── Services pricing table → card layout ── */
+  .services-table-header {
+    display: none !important;
+  }
+  .services-table-row {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 16px 20px !important;
+    gap: 4px !important;
+    align-items: flex-start !important;
+  }
+  .services-table-row .service-name {
+    font-size: 14px !important;
+    padding-right: 0 !important;
+  }
+  .services-table-row .service-price {
+    text-align: left !important;
+    min-width: 0 !important;
+    font-size: 13px !important;
+    margin-top: 4px !important;
+  }
+  .services-table-row .service-notes {
+    text-align: left !important;
+    min-width: 0 !important;
+    padding-left: 0 !important;
+    font-size: 11px !important;
+  }
+
+  /* ── Portfolio: single column ── */
   #portfolio [style*="minmax(340px"] {
     grid-template-columns: 1fr !important;
   }
 
-  /* Anatomy: full width, reduced padding on mobile */
-  #anatomy .w-full {
-    padding: 0 20px !important;
+  /* ── AIPackages: 1 column ── */
+  #ai-packages [style*="repeat(3"] {
+    grid-template-columns: 1fr !important;
   }
 
-  /* Tiers: stack rows, reduce gap */
-  #tiers [style*="display: flex"][style*="alignItems: center"] {
-    flex-direction: column !important;
-    gap: 32px !important;
-  }
-  #tiers [style*="maxWidth: '460px'"] {
-    max-width: 100% !important;
-  }
-
-  /* BookConsultation: stack the two-panel layout */
+  /* ── BookConsultation: stack layout ── */
   .book-consultation-layout {
     flex-direction: column !important;
     gap: 40px !important;
   }
 
-  /* AIPackages: 1 column on small screens */
-  #ai-packages [style*="repeat(3"] {
-    grid-template-columns: 1fr !important;
+  /* ── Hero CTA buttons: full width ── */
+  .hero-cta-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+  .hero-cta-row a {
+    text-align: center !important;
   }
 
-  /* IndividualServices: make tabs scrollable */
-  #individual-services [style*="display: flex"][style*="overflow"] {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
+  /* ── Hero badges: tighter ── */
+  .hero-badges {
+    gap: 10px !important;
   }
 
-  /* Reduce heavy section padding */
-  section {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  /* Marquee: keep it readable */
-  .marquee-item { padding: 0 20px !important; }
-
-  /* Hero: ensure video covers full viewport on mobile */
+  /* ── Hero video: centred cover ── */
   #hero video {
     position: absolute !important;
     top: 50% !important;
@@ -275,53 +379,39 @@
     height: auto !important;
   }
 
-  /* Hero CTA buttons: full width on mobile */
-  .hero-cta-row {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 12px !important;
-  }
-  .hero-cta-row a {
-    text-align: center !important;
-    justify-content: center !important;
-  }
+  /* ── Marquee ── */
+  .marquee-item { padding: 0 20px !important; }
 
-  /* Hero badges: wrap tightly */
-  .hero-badges {
-    gap: 12px !important;
-  }
-
-  /* Ensure all flex rows wrap on mobile */
-  [style*="display: flex"] {
-    max-width: 100% !important;
-  }
-
-  /* Footer CTA area: stack contact links vertically */
-  #footer [style*="gap: '48px'"] {
+  /* ── Footer contact row ── */
+  #footer .footer-contact-row {
     flex-direction: column !important;
     gap: 16px !important;
     align-items: center !important;
   }
 }
 
+/* ─────────────────────────────────────────────────────── */
+/* MOBILE — 480px and below                                */
+/* ─────────────────────────────────────────────────────── */
 @media (max-width: 480px) {
-  /* Stats: 2 columns instead of 4 */
+
+  /* Stats: 2 columns */
   #stats [style*="repeat(auto"] {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
-  /* Hero title: bigger relative size on very small screens */
+  /* Hero title */
   #hero h1 {
     font-size: clamp(28px, 9vw, 48px) !important;
     line-height: 1.05 !important;
   }
 
-  /* Hero subtitle: reduce size */
+  /* Hero subtitle */
   #hero p {
     font-size: 14px !important;
   }
 
-  /* Testimonials: always 1 column on phones */
+  /* Testimonials: 1 column */
   #testimonials [style*="repeat(3"] {
     grid-template-columns: 1fr !important;
   }
@@ -331,9 +421,19 @@
     grid-template-columns: 1fr !important;
   }
 
-  /* Reduce glass card padding on tiny screens */
+  /* Tiers: reduce bottom margin between tiers */
+  .tier-row {
+    margin-bottom: 64px !important;
+  }
+
+  /* Glass card padding */
   .omega-glass {
     padding: 20px !important;
+  }
+
+  /* Services table row: tighter */
+  .services-table-row {
+    padding: 14px 16px !important;
   }
 }
 

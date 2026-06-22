@@ -196,7 +196,7 @@ export const statsConfig: StatsConfig = {
 
 export const manifestoConfig: ManifestoConfig = {
   sectionLabel: "OUR MANIFESTO",
-  text: "We are OMEGAELZ — a next-generation digital agency launched in 2026 to help brands grow, scale, and stand out. We combine creativity, technology, and strategic thinking to deliver impactful digital experiences that drive visibility, efficiency, and growth.",
+  text: "We are OMEGAELZ — a next-generation digital agency built to help brands grow, scale, and stand out. We combine creativity, technology, and strategic thinking to deliver impactful digital experiences that drive visibility, efficiency, and growth.",
   subtext: "From building strong online identities to streamlining operations with AI, we turn ideas into lasting results. Based in South Africa, serving businesses worldwide.",
 }
 
@@ -573,12 +573,12 @@ export const footerConfig: FooterConfig = {
     {
       heading: "Packages",
       links: [
-        { label: "Basic Website — R4,750", href: "#tiers" },
-        { label: "Standard Website — R5,000", href: "#tiers" },
-        { label: "Premium Website — R7,800", href: "#tiers" },
-        { label: "AI Starter — R8,500/mo", href: "#ai-packages" },
-        { label: "AI Growth — R18,500/mo", href: "#ai-packages" },
-        { label: "AI Enterprise — R45,000/mo", href: "#ai-packages" },
+        { label: "Basic Website — R4,749", href: "#tiers" },
+        { label: "Standard Website — R6,499", href: "#tiers" },
+        { label: "Premium Website — R7,799", href: "#tiers" },
+        { label: "AI Starter — R8,499/mo", href: "#ai-packages" },
+        { label: "AI Growth — R18,499/mo", href: "#ai-packages" },
+        { label: "AI Enterprise — R44,999/mo", href: "#ai-packages" },
       ],
     },
     {
