@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://omegaelz.com/sitemap.xml
+Sitemap: https://omegaelz.co.za/sitemap.xml
